@@ -3,3 +3,9 @@
     <%= form.text_field :user_id %>
     <%= form.submit %>
 <% end %>
+
+<hr>
+
+<% @photos.each do |photo| %>
+    <%= link_to image_tag(Flickr.url_t(photo)), Flickr.url_t(photo)%>
+<% end %>
